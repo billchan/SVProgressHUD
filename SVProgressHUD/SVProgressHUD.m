@@ -449,6 +449,11 @@ static const CGFloat SVProgressHUDUndefinedProgress = -1;
         self.backgroundLayer = nil;
     }
     switch (self.defaultMaskType){
+        case SVProgressHUDMaskTypeBlack100: {
+            self.backgroundColor = [UIColor colorWithWhite:0 alpha:1.0];
+            break;
+        }
+            
         case SVProgressHUDMaskTypeBlack:{
             
             self.backgroundLayer = [CALayer layer];
